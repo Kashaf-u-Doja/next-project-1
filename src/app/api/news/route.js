@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
 
-const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
+const API_KEY = process.env.NEWS_API_KEY;
 const BASE_URL = "https://newsapi.org/v2";
 
 // Debug logging for production
