@@ -8,7 +8,9 @@ const BASE_URL = "https://newsapi.org/v2";
 console.log("Environment check:", {
   hasApiKey: !!API_KEY,
   apiKeyLength: API_KEY?.length || 0,
-  nodeEnv: process.env.NODE_ENV
+  nodeEnv: process.env.NODE_ENV,
+  allEnvKeys: Object.keys(process.env).filter(key => key.includes('NEWS')),
+  timestamp: new Date().toISOString()
 });
 
 const api = axios.create({
